@@ -4,46 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link rel="stylesheet" href="css/index.css">
 
 <body>
 
-  <!-- Desktop ribbon menu -->
-  <div class="desktop-menu">
+  <!-- ribbon ribbon menu -->
+  <div class="menu">
     <a href="#" class="logo"><img src="images/logo_text.svg" alt="Southbrook church logo" /></a>
 
-    <div class="links">
+    <div class="desktop-links hide-small">
       <a href="#">About Us</a>
       <a href="#">Contact Us</a>
       <a href="#">Staff</a>
       <a href="#">Giving</a>
     </div>
+    <div class="mobile-links hide-medium hide-large">
+      <button onclick="openMenu()"><i class="fa fa-bars"></i></button>
+    </div>
+  </div>
+
+  <div class="mobile-menu hide-medium hide-large" id="mobileMenu">
+    <button onclick="closeMenu()"><i class="fas fa-times"></i></button>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Staff</a>
+    <a href="#">Giving</a>
   </div>
 
   <!-- Header with full-height image -->
   <header>
-    <h3>Glorify God</h3>
-    <h3>Grow in Grace</h3>
-    <h3>Give the Gospel</h3>
+    <p>Glorify God</p>
+    <p>Grow in Grace</p>
+    <p>Give the Gospel</p>
   </header>
 
   <main>
     <div class="join-us">
-      <p>
-        <a href="#">Our Location</a>
-        Join us in person at 10:30AM
-      </p>
+      <div class="text">
+        <div>
+          <p>Join us in Person!</p>
+          <p class="sub">9:30 AM Sunday School</p>
+          <p class="sub">10:30 AM Worship Service</p>
+        </div>
+        <a href="#">Get Directions</a>
+      </div>
       <div class="centered-or">
         <hr />
         <p>or</p>
         <hr />
       </div>
-      <p>Watch us online <a href="#">Here</a></p>
+      <a href="#">Watch us Online</a>
     </div>
   </main>
 
   <!-- Footer -->
   <footer></footer>
+
+  <script>
+    var menu = document.getElementById("mobileMenu");
+
+    function openMenu() {
+      menu.style.display = "flex";
+    }
+
+    function closeMenu() {
+      menu.style.display = "none";
+    }
+  </script>
 
 </body>
 

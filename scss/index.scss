@@ -3,6 +3,7 @@ $dark-green: #005953;
 $light-green: #439539;
 $lighter-green: #328045;
 $black: #000;
+$translucent-black: #000000a9;
 $gray: #616161;
 $light-gray: #cfd1cf;
 
@@ -14,14 +15,34 @@ $light-gray: #cfd1cf;
 /* stylelint-disable-next-line function-url-quotes */
 @import url( 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap' );
 
+/* default classes for hiding based on screen size */
+@media ( max-width: 600px ) {
+	.hide-small {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
+@media ( max-width: 992px ) and ( min-width: 601px ) {
+	.hide-medium {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
+@media ( min-width: 993px ) {
+	.hide-large {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
 body {
 	margin: 0;
 
 	background: $white;
 }
 
+/* start menu stuff */
 /* The fixed ribbon menu the shows on desktop */
-.desktop-menu {
+.menu {
 	display: flex;
 
 	position: fixed;
@@ -49,8 +70,8 @@ body {
 		}
 	}
 
-	/* the row of links to various pages */
-	.links {
+	/* the row of links on medium to large screens to various pages */
+	.desktop-links {
 		display: flex;
 
 		align-items: center;
@@ -80,14 +101,113 @@ body {
 			color: $light-green;
 		}
 	}
+
+	.mobile-links {
+		display: flex;
+
+		align-items: center;
+		justify-content: flex-end;
+
+		width: 100%;
+
+		height: 100%;
+
+		button {
+			display: flex;
+
+			align-items: center;
+			justify-content: center;
+
+			width: 2em;
+
+			height: 100%;
+
+			padding: 0.5em;
+
+			border: 0;
+
+			background: $light-green;
+
+			color: $light-gray;
+
+			font-size: 1.5em;
+		}
+	}
 }
 
+/* styling for the popup mobile menu */
+.mobile-menu {
+	display: none;
+
+	position: fixed;
+
+	z-index: 2;
+
+	top: 0;
+	right: 0;
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+
+	height: 100%;
+
+	background: $translucent-black;
+
+	button {
+		display: flex;
+
+		position: absolute;
+
+		top: 0;
+		right: 0;
+
+		align-items: center;
+		justify-content: center;
+
+		width: 2em;
+
+		padding: 0.5em;
+
+		border: 0;
+
+		background: $light-green;
+
+		color: $light-gray;
+
+		font-size: 1.5em;
+	}
+
+	a {
+		width: calc( 100% - 3em );
+
+		margin: 1em;
+
+		padding: 0.5em;
+
+		border-radius: 1.1em;
+
+		background: $light-green;
+
+		color: $light-gray;
+
+		font-family: 'Straczynski', 'Open Sans', sans-serif;
+		font-size: 1.2em;
+		text-align: center;
+		text-decoration: none;
+	}
+}
+/* end menu stuff */
+
+/* The main hero image with taglines */
 header {
 	display: flex;
 
 	position: relative;
 
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 
 	width: 100%;
@@ -100,21 +220,51 @@ header {
 	background-position: center;
 	background-size: cover;
 
-	h3 {
+	/* The three tagline segments */
+	p {
 		align-self: flex-end;
 
-		padding: 0.5em;
-		padding-right: 5em;
+		margin: 0.3em;
+		margin-bottom: 0.5em;
 
-		border-radius: 1.2em 0 0 1.2em;
+		padding: 0.8em;
 
-		background-color: $dark-green;
+		border-radius: 1.3em;
+
+		background: $dark-green;
 
 		color: $light-gray;
+
+		font-family: 'Straczynski', 'Open Sans', sans-serif;
+		font-size: 1.2em;
 	}
 }
 
+@media ( max-width: 600px ) {
+	header {
+		flex-direction: column;
+		justify-content: flex-end;
+
+		height: 25em;
+
+		p {
+			align-self: stretch;
+
+			margin-right: 1em;
+			margin-left: 1em;
+
+			padding: 0.5em;
+
+			font-size: 1em;
+			text-align: center;
+		}
+	}
+}
+
+/* All the main content */
 main {
+
+	/* The join us/call to action ribbon */
 	.join-us {
 		display: flex;
 
@@ -122,12 +272,125 @@ main {
 
 		width: 100%;
 
-		background-color: $light-green;
+		background: $dark-green;
 
+		color: $light-gray;
+
+		/* For the bottom half, watch online button */
+		> a {
+			display: flex;
+
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $light-gray;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+
+		/* The top/first half of the ribbon (with times and location) */
+		.text {
+			display: flex;
+
+			flex-direction: row;
+			align-items: center;
+
+			padding: 1em;
+
+			div {
+				display: flex;
+
+				flex-direction: column;
+
+				width: 50%;
+
+				p {
+					display: flex;
+
+					align-items: center;
+					justify-content: center;
+
+					margin: 0;
+					margin-bottom: 0.4em;
+
+					font-size: 1.4em;
+				}
+
+				.sub {
+					margin-bottom: 0.2em;
+
+					font-size: 1em;
+				}
+			}
+
+			a {
+				display: flex;
+
+				align-items: center;
+				justify-content: center;
+
+				width: 9em;
+
+				height: min-content;
+
+				margin-right: calc( 25% - 5em );
+				margin-left: calc( 25% - 5em );
+
+				padding: 0.8em;
+
+				border-radius: 0.5em;
+
+				background: $light-green;
+
+				color: $light-gray;
+
+				font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: $dark-green;
+			}
+		}
+
+		@media ( max-width: 600px ) {
+			.text {
+				flex-direction: column;
+
+				div {
+					width: 100%;
+				}
+
+				a {
+					margin-top: 1em;
+				}
+			}
+		}
+
+		/* styling the centered "or" with the surrounding lines */
 		.centered-or {
 			display: flex;
 
 			flex-direction: row;
+			align-items: center;
 
 			hr {
 				width: 100%;
@@ -139,11 +402,13 @@ main {
 
 				border: 0;
 
-				background: $dark-green;
+				background: $light-green;
 			}
 
 			p {
 				margin: 0;
+
+				font-size: 1.5em;
 			}
 		}
 	}
