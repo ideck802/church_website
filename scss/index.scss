@@ -412,4 +412,90 @@ main {
 			}
 		}
 	}
+
+	.ministries-ribbon {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		background-image: url( ../images/entryway.jpg );
+		background-position: center;
+		background-size: cover;
+
+		>p {
+			padding: 0.6em;
+
+			border-radius: 1.3em;
+
+			background: $dark-green;
+
+			color: $light-gray;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+			font-size: 1.2em;
+		}
+
+		.ministries-list {
+			display: flex;
+
+			flex-direction: row;
+
+			.ministry {
+				display: flex;
+
+				flex-direction: column;
+
+				width: 100%;
+
+				margin: 1em;
+
+				padding: 1em;
+
+				border: 2px solid $light-green;
+				border-radius: 1em;
+
+				background: $translucent-black;
+
+				h4 {
+					color: $light-gray;
+
+					font-family: 'Straczynski', 'Open Sans', sans-serif;
+					font-size: 1.1em;
+					font-weight: normal;
+
+					text-align: center;
+				}
+
+				p {
+					height: 100%;
+
+					color: $light-gray;
+				}
+
+				a {
+					align-self: center;
+
+					width: max-content;
+
+					padding: 0.8em;
+
+					border-radius: 0.5em;
+
+					background: $light-green;
+
+					color: $white;
+
+					font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+					text-decoration: none;
+				}
+
+				a:hover {
+					color: $dark-green;
+				}
+			}
+		}
+	}
 }
