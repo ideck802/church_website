@@ -94,6 +94,8 @@ body {
 
 			font-family: 'Straczynski', 'Open Sans', sans-serif;
 
+			font-size: 1em;
+
 			text-decoration: none;
 		}
 
@@ -497,5 +499,60 @@ main {
 				}
 			}
 		}
+	}
+}
+
+footer {
+	display: flex;
+
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	background: $light-gray;
+
+	.address {
+		min-width: 12em;
+
+		padding-left: 2em;
+
+		p {
+			margin-top: 0.4em;
+			margin-bottom: 0.4em;
+		}
+	}
+
+	.footer-menu {
+		display: flex;
+
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+
+		a {
+			padding: 1em;
+
+			color: $dark-green;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			font-size: 1em;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $light-green;
+		}
+	}
+
+	.social-media {
+		min-width: 12em;
 	}
 }
