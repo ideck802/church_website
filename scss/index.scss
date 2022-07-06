@@ -428,6 +428,8 @@ main {
 		align-items: center;
 		justify-content: center;
 
+		overflow: hidden;
+
 		background-image: url( ../images/entryway.jpg );
 		background-position: center;
 		background-size: cover;
@@ -509,12 +511,42 @@ main {
 			}
 		}
 
-		@media ( max-width: 600px ) {
+		.arrows {
+			display: flex;
+
+			width: 100%;
+
+			i {
+				width: 100%;
+
+				color: $black;
+
+				text-align: center;
+			}
+
+			p {
+				margin: 0;
+
+				color: $black;
+
+				font-family: 'Straczynski', 'Open Sans', sans-serif;
+				font-size: 0.8em;
+			}
+		}
+
+		@media ( max-width: 760px ) {
 			.ministries-list {
-				flex-direction: column;
+				flex-direction: row;
+
+				width: 100%;
+
+				overflow: scroll;
+				scroll-snap-type: x mandatory;
 
 				.ministry {
-					width: auto;
+					min-width: calc( 100vw - 5em );
+
+					scroll-snap-align: center;
 				}
 			}
 		}
