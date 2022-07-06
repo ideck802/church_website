@@ -16,13 +16,13 @@ $light-gray: #cfd1cf;
 @import url( 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap' );
 
 /* default classes for hiding based on screen size */
-@media ( max-width: 600px ) {
+@media ( max-width: 760px ) {
 	.hide-small {
 		display: none !important; /* stylelint-disable-line declaration-no-important */
 	}
 }
 
-@media ( max-width: 992px ) and ( min-width: 601px ) {
+@media ( max-width: 992px ) and ( min-width: 761px ) {
 	.hide-medium {
 		display: none !important; /* stylelint-disable-line declaration-no-important */
 	}
@@ -67,6 +67,12 @@ body {
 
 		img {
 			height: 100%;
+		}
+	}
+
+	@media ( max-width: 600px ) {
+		.logo {
+			height: 2.5em;
 		}
 	}
 
@@ -461,6 +467,9 @@ main {
 				background: $translucent-black;
 
 				h4 {
+					margin-top: 0.6em;
+					margin-bottom: 0.6em;
+
 					color: $light-gray;
 
 					font-family: 'Straczynski', 'Open Sans', sans-serif;
@@ -496,6 +505,16 @@ main {
 
 				a:hover {
 					color: $dark-green;
+				}
+			}
+		}
+
+		@media ( max-width: 600px ) {
+			.ministries-list {
+				flex-direction: column;
+
+				.ministry {
+					width: auto;
 				}
 			}
 		}
@@ -554,5 +573,11 @@ footer {
 
 	.social-media {
 		min-width: 12em;
+	}
+}
+
+@media ( max-width: 600px ) {
+	footer {
+		flex-direction: column;
 	}
 }
