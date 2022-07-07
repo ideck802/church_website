@@ -14,6 +14,7 @@
   <div class="menu">
     <a href="#" class="logo"><img src="images/logo_text.svg" alt="Southbrook church logo" /></a>
 
+    <!-- menu links only shown on large/medium screens -->
     <div class="desktop-links hide-small">
       <a href="#">About Us</a>
       <a href="#">Ministries</a>
@@ -21,11 +22,13 @@
       <a href="#">Staff</a>
       <a href="#">Giving</a>
     </div>
+    <!-- open menu button only shown on small screens -->
     <div class="mobile-links hide-medium hide-large">
       <button onclick="openMenu()"><i class="fa fa-bars"></i></button>
     </div>
   </div>
 
+  <!-- toggleable popup menu for mobile -->
   <div class="mobile-menu hide-medium hide-large" id="mobileMenu">
     <button onclick="closeMenu()"><i class="fas fa-times"></i></button>
     <a href="#">About Us</a>
@@ -62,9 +65,11 @@
       <a href="#">Watch us Online</a>
     </div>
 
+    <!-- slider/list of the ministries offered -->
     <div class="ministries-ribbon">
       <p>Our Ministries</p>
 
+      <!-- for large and medium screens -->
       <div class="ministries-list hide-small">
         <div class="ministry">
           <h4>Sunday School</h4>
@@ -96,11 +101,13 @@
         </div>
       </div>
 
+      <!-- arrows that instruct user to scroll to view ministries on mobile -->
       <div class="arrows hide-large hide-medium">
         <i class="fas fa-arrow-left"></i>
         <p>Swipe</p>
         <i class="fas fa-arrow-right"></i>
       </div>
+      <!-- for small/mobile screens -->
       <div class="ministries-list hide-large hide-medium">
         <div class="ministry">
           <h4>Sunday School</h4>
@@ -152,6 +159,7 @@
     </div>
   </footer>
 
+  <!-- menu open/close control -->
   <script>
     var menu = document.getElementById("mobileMenu");
 

@@ -55,7 +55,7 @@ body {
 
 	width: 100%;
 
-	height: 3em;
+	height: 3.5em;
 
 	border-bottom: 3px solid $dark-green;
 
@@ -70,13 +70,16 @@ body {
 		}
 	}
 
+	/* shrink logo on mobile */
 	@media ( max-width: 600px ) {
+		height: 3em;
+
 		.logo {
 			height: 2.5em;
 		}
 	}
 
-	/* the row of links on medium to large screens to various pages */
+	/* the row of navigation links on medium to large screens */
 	.desktop-links {
 		display: flex;
 
@@ -110,6 +113,7 @@ body {
 		}
 	}
 
+	/* styling for open menu button and container */
 	.mobile-links {
 		display: flex;
 
@@ -248,6 +252,7 @@ header {
 	}
 }
 
+/* change direction and size of taglines on mobile */
 @media ( max-width: 600px ) {
 	header {
 		flex-direction: column;
@@ -379,6 +384,7 @@ main {
 			}
 		}
 
+		/* change direction of times and location text on mobile */
 		@media ( max-width: 600px ) {
 			.text {
 				flex-direction: column;
@@ -421,6 +427,7 @@ main {
 		}
 	}
 
+	/* ribbon/slider for list of ministries */
 	.ministries-ribbon {
 		display: flex;
 
@@ -447,11 +454,13 @@ main {
 			font-size: 1.2em;
 		}
 
+		/* each group of ministries */
 		.ministries-list {
 			display: flex;
 
 			flex-direction: row;
 
+			/* indivivual item styling */
 			.ministry {
 				display: flex;
 
@@ -511,6 +520,7 @@ main {
 			}
 		}
 
+		/* arrows that show user to scroll/drag horizontally to view more ministries on mobile */
 		.arrows {
 			display: flex;
 
@@ -534,6 +544,7 @@ main {
 			}
 		}
 
+		/* make ministries list a scroll snap enabled scroll interface to act as carousel */
 		@media ( max-width: 760px ) {
 			.ministries-list {
 				flex-direction: row;
@@ -552,7 +563,9 @@ main {
 		}
 	}
 }
+/* main content end */
 
+/* footer styling start */
 footer {
 	display: flex;
 
@@ -565,6 +578,7 @@ footer {
 
 	background: $light-gray;
 
+	/* styling the displayed address */
 	.address {
 		min-width: 12em;
 
@@ -576,6 +590,7 @@ footer {
 		}
 	}
 
+	/* styling the group of links in footer that are the same as in top menu */
 	.footer-menu {
 		display: flex;
 
@@ -585,6 +600,9 @@ footer {
 		justify-content: center;
 
 		width: 100%;
+
+		border-right: 1px solid $light-green;
+		border-left: 1px solid $light-green;
 
 		a {
 			padding: 1em;
@@ -603,13 +621,43 @@ footer {
 		}
 	}
 
+	/* links to social media like facebook page */
 	.social-media {
+		display: flex;
+
+		flex-direction: row;
+		justify-content: center;
+
 		min-width: 12em;
+
+		color: $dark-green;
 	}
 }
 
+/* make footer vertical on mobile and change the area-splitting borders */
 @media ( max-width: 600px ) {
 	footer {
 		flex-direction: column;
+
+		.address {
+			padding-left: 0;
+
+			p {
+				text-align: center;
+			}
+		}
+
+		.footer-menu {
+			border: 0;
+		}
+
+		.social-media {
+			padding-top: 1em;
+			padding-right: 1.5em;
+			padding-left: 1.5em;
+
+			border-top: 1px solid $light-green;
+		}
 	}
 }
+/* footer styling end */
