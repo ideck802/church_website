@@ -459,6 +459,14 @@ main {
 			margin-left: 5em;
 
 			font-size: 1.1em;
+			text-align: justify;
+		}
+
+		@media ( max-width: 760px ) {
+			p {
+				margin-right: 2em;
+				margin-left: 2em;
+			}
 		}
 
 		a {
