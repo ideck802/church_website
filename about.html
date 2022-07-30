@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<title>Southbrook Baptist Church</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/about.css">
+
+<body>
+
+  <!-- ribbon ribbon menu -->
+  <div class="menu">
+    <a href="#" class="logo"><img src="images/logo_text.svg" alt="Southbrook church logo" /></a>
+
+    <!-- menu links only shown on large/medium screens -->
+    <div class="desktop-links hide-small">
+      <a href="./about.html">About Us</a>
+      <a href="#">Ministries</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Staff</a>
+      <a href="#">Giving</a>
+    </div>
+    <!-- open menu button only shown on small screens -->
+    <div class="mobile-links hide-medium hide-large">
+      <button onclick="openMenu()"><i class="fa fa-bars"></i></button>
+    </div>
+  </div>
+
+  <!-- toggleable popup menu for mobile -->
+  <div class="mobile-menu hide-medium hide-large" id="mobileMenu">
+    <button onclick="closeMenu()"><i class="fas fa-times"></i></button>
+    <a href="./about.html">About Us</a>
+    <a href="#">Ministries</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Staff</a>
+    <a href="#">Giving</a>
+  </div>
+
+  <!-- Header with full-height image -->
+  <header>
+    <p>Glorify God</p>
+    <p>Grow in Grace</p>
+    <p>Give the Gospel</p>
+  </header>
+
+  <main>
+
+    <!-- Quick about section to introduce a link -->
+    <div class="mission">
+      <p class="title">Our Mission</p>
+      <p>Southbrook Baptist Church is a Bible following community of believers sharing the journey of
+        following Christ with each other. We enjoy our small-group ministries where we can share our growth and
+        questions.
+      </p>
+    </div>
+
+    <div class="beliefs">
+      <p class="title">Our Beliefs</p>
+      <p>Southbrook Baptist Church is a Bible following community of believers sharing the journey of
+        following Christ with each other. We enjoy our small-group ministries where we can share our growth and
+        questions.
+      </p>
+    </div>
+
+    <div class="staff">
+      <a href="./about.html">View the Staff</a>
+    </div>
+
+    <div class="history">
+      <p class="title">Our Story</p>
+      <p>Southbrook Baptist Church is a Bible following community of believers sharing the journey of
+        following Christ with each other. We enjoy our small-group ministries where we can share our growth and
+        questions.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="address">
+      <a
+        href="https://www.google.com/maps/place/Southbrook+Baptist+Church/@46.4223776,-95.1455067,19z/data=!4m5!3m4!1s0x52b63d3ed1aad4cd:0xb684447cdd9133fd!8m2!3d46.4223462!4d-95.1450211">
+        <p>Southbrook Baptist Church</p>
+        <p>1842 2nd St SW</p>
+        <p>Wadena, MN 56482</p>
+      </a>
+    </div>
+    <div class="footer-menu">
+      <a href="./about.html">About Us</a>
+      <a href="#">Ministries</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Staff</a>
+      <a href="#">Giving</a>
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com/southbrookbaptist.church"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:Sbcmn@wcta.net"><i class="fas fa-envelope"></i></a>
+      <!--<a href="#"><i class="fab fa-youtube"></i></a>-->
+    </div>
+  </footer>
+
+  <!-- menu open/close control -->
+  <script>
+    var menu = document.getElementById("mobileMenu");
+
+    function openMenu() {
+      menu.style.display = "flex";
+    }
+
+    function closeMenu() {
+      menu.style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

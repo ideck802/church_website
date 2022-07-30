@@ -1,0 +1,652 @@
+$white: #fff;
+$dark-green: #005953;
+$light-green: #439539;
+$lighter-green: #328045;
+$black: #000;
+$translucent-black: #000000a9;
+$gray: #616161;
+$light-gray: #cfd1cf;
+
+@font-face {
+	font-family: 'Straczynski';
+	src: url( ./fonts/Straczynski/Straczynski.ttf );
+}
+
+/* stylelint-disable-next-line function-url-quotes */
+@import url( 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap' );
+
+/* default classes for hiding based on screen size */
+@media ( max-width: 760px ) {
+	.hide-small {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
+@media ( max-width: 992px ) and ( min-width: 761px ) {
+	.hide-medium {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
+@media ( min-width: 993px ) {
+	.hide-large {
+		display: none !important; /* stylelint-disable-line declaration-no-important */
+	}
+}
+
+body {
+	margin: 0;
+
+	background: $white;
+}
+
+/* start menu stuff */
+/* The fixed ribbon menu the shows on desktop */
+.menu {
+	display: flex;
+
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+
+	flex-direction: row;
+	align-items: center;
+
+	width: 100%;
+
+	height: 3.5em;
+
+	border-bottom: 3px solid $dark-green;
+
+	background: $white;
+
+	/* the leftmost logo home page link */
+	.logo {
+		height: 3em;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	/* shrink logo on mobile */
+	@media ( max-width: 600px ) {
+		height: 3em;
+
+		.logo {
+			height: 2.5em;
+		}
+	}
+
+	/* the row of navigation links on medium to large screens */
+	.desktop-links {
+		display: flex;
+
+		align-items: center;
+		justify-content: flex-end;
+
+		width: 100%;
+
+		height: 100%;
+
+		a {
+			display: flex;
+
+			align-items: center;
+
+			height: 100%;
+
+			margin-right: 1em;
+
+			color: $dark-green;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			font-size: 1em;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $light-green;
+		}
+	}
+
+	/* styling for open menu button and container */
+	.mobile-links {
+		display: flex;
+
+		align-items: center;
+		justify-content: flex-end;
+
+		width: 100%;
+
+		height: 100%;
+
+		button {
+			display: flex;
+
+			align-items: center;
+			justify-content: center;
+
+			width: 2em;
+
+			height: 100%;
+
+			padding: 0.5em;
+
+			border: 0;
+
+			background: $light-green;
+
+			color: $light-gray;
+
+			font-size: 1.5em;
+		}
+	}
+}
+
+/* styling for the popup mobile menu */
+.mobile-menu {
+	display: none;
+
+	position: fixed;
+
+	z-index: 2;
+
+	top: 0;
+	right: 0;
+
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+
+	height: 100%;
+
+	background: $translucent-black;
+
+	button {
+		display: flex;
+
+		position: absolute;
+
+		top: 0;
+		right: 0;
+
+		align-items: center;
+		justify-content: center;
+
+		width: 2em;
+
+		padding: 0.5em;
+
+		border: 0;
+
+		background: $light-green;
+
+		color: $light-gray;
+
+		font-size: 1.5em;
+	}
+
+	a {
+		width: calc( 100% - 3em );
+
+		margin: 1em;
+
+		padding: 0.5em;
+
+		border-radius: 1.1em;
+
+		background: $light-green;
+
+		color: $light-gray;
+
+		font-family: 'Straczynski', 'Open Sans', sans-serif;
+		font-size: 1.2em;
+		text-align: center;
+		text-decoration: none;
+	}
+}
+/* end menu stuff */
+
+/* The main hero image with taglines */
+header {
+	display: flex;
+
+	position: relative;
+
+	flex-direction: row;
+	justify-content: center;
+
+	width: 100%;
+
+	height: 20em;
+
+	margin-top: 3em;
+
+	background-image: url( ../images/auditorium.jpg );
+	background-position: center;
+	background-size: cover;
+
+	/* The three tagline segments */
+	p {
+		align-self: flex-end;
+
+		margin: 0.3em;
+		margin-bottom: 0.5em;
+
+		padding: 0.8em;
+
+		border-radius: 1.3em;
+
+		background: $dark-green;
+
+		color: $light-gray;
+
+		font-family: 'Straczynski', 'Open Sans', sans-serif;
+		font-size: 1.2em;
+	}
+}
+
+/* change direction and size of taglines on mobile */
+@media ( max-width: 600px ) {
+	header {
+		flex-direction: column;
+		justify-content: flex-end;
+
+		height: 25em;
+
+		p {
+			align-self: stretch;
+
+			margin-right: 1em;
+			margin-left: 1em;
+
+			padding: 0.5em;
+
+			font-size: 1em;
+			text-align: center;
+		}
+	}
+}
+
+/* All the main content */
+main {
+	.mission {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+
+		width: 100%;
+
+		background: $light-gray;
+
+		color: $black;
+
+		.title {
+			width: max-content;
+
+			padding: 0.6em;
+
+			border-radius: 1.3em;
+
+			background: $dark-green;
+
+			color: $light-gray;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+			font-size: 1.2em;
+		}
+
+		p {
+			margin-right: 5em;
+			margin-left: 5em;
+
+			font-size: 1.1em;
+			text-align: justify;
+		}
+
+		@media ( max-width: 760px ) {
+			p {
+				margin-right: 2em;
+				margin-left: 2em;
+			}
+		}
+
+		a {
+			display: flex;
+
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+	}
+
+	.beliefs {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+
+		width: 100%;
+
+		background: $white;
+
+		color: $black;
+
+		.title {
+			width: max-content;
+
+			padding: 0.6em;
+
+			border-radius: 1.3em;
+
+			background: $dark-green;
+
+			color: $light-gray;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+			font-size: 1.2em;
+		}
+
+		p {
+			margin-right: 5em;
+			margin-left: 5em;
+
+			font-size: 1.1em;
+			text-align: justify;
+		}
+
+		@media ( max-width: 760px ) {
+			p {
+				margin-right: 2em;
+				margin-left: 2em;
+			}
+		}
+
+		a {
+			display: flex;
+
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+	}
+
+	.staff {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+
+		width: 100%;
+
+		background: $light-gray;
+
+		color: $black;
+
+		a {
+			display: flex;
+
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+	}
+
+	.history {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+
+		width: 100%;
+
+		background: $light-gray;
+
+		color: $black;
+
+		.title {
+			width: max-content;
+
+			padding: 0.6em;
+
+			border-radius: 1.3em;
+
+			background: $dark-green;
+
+			color: $light-gray;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+			font-size: 1.2em;
+		}
+
+		p {
+			margin-right: 5em;
+			margin-left: 5em;
+
+			font-size: 1.1em;
+			text-align: justify;
+		}
+
+		@media ( max-width: 760px ) {
+			p {
+				margin-right: 2em;
+				margin-left: 2em;
+			}
+		}
+
+		a {
+			display: flex;
+
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+	}
+}
+/* main content end */
+
+/* footer styling start */
+footer {
+	display: flex;
+
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	background: $white;
+
+	/* styling the displayed address */
+	.address {
+		display: flex;
+
+		flex-direction: column;
+
+		min-width: 12em;
+
+		padding-left: 2em;
+
+		a {
+			margin-top: 0.4em;
+			margin-bottom: 0.4em;
+
+			color: $dark-green;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $light-green;
+		}
+	}
+
+	/* styling the group of links in footer that are the same as in top menu */
+	.footer-menu {
+		display: flex;
+
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+
+		border-right: 1px solid $light-green;
+		border-left: 1px solid $light-green;
+
+		a {
+			padding: 1em;
+
+			color: $dark-green;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			font-size: 1em;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $light-green;
+		}
+	}
+
+	/* links to social media like facebook page */
+	.social-media {
+		display: flex;
+
+		flex-direction: row;
+		justify-content: center;
+
+		min-width: 10em;
+
+		font-size: 1.4em;
+
+		a {
+			padding: 0.8em;
+
+			color: $dark-green;
+		}
+
+		a:hover {
+			color: $light-green;
+		}
+	}
+}
+
+/* make footer vertical on mobile and change the area-splitting borders */
+@media ( max-width: 600px ) {
+	footer {
+		flex-direction: column;
+
+		.address {
+			padding-left: 0;
+
+			a {
+				text-align: center;
+			}
+		}
+
+		.footer-menu {
+			border: 0;
+		}
+
+		.social-media {
+			padding-top: 1em;
+			padding-right: 1.5em;
+			padding-left: 1.5em;
+
+			border-top: 1px solid $light-green;
+		}
+	}
+}
+/* footer styling end */
