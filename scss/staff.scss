@@ -422,7 +422,7 @@ header {
 
 	width: 100%;
 
-	height: 20em;
+	height: 15em;
 
 	margin-top: 3em;
 
@@ -474,158 +474,7 @@ header {
 
 /* All the main content */
 main {
-
-	/* The join us/call to action ribbon */
-	.join-us {
-		display: flex;
-
-		flex-direction: column;
-
-		width: 100%;
-
-		background: $dark-green;
-
-		color: $light-gray;
-
-		/* For the bottom half, watch online button */
-		> a {
-			display: flex;
-
-			align-items: center;
-			align-self: center;
-			justify-content: center;
-
-			width: 11em;
-
-			margin: 1em;
-
-			padding: 0.8em;
-
-			border-radius: 0.5em;
-
-			background: $light-green;
-
-			color: $white;
-
-			font-family: 'Straczynski', 'Open Sans', sans-serif;
-
-			text-decoration: none;
-		}
-
-		a:hover {
-			color: $dark-green;
-		}
-
-		/* The top/first half of the ribbon (with times and location) */
-		.text {
-			display: flex;
-
-			flex-direction: row;
-			align-items: center;
-
-			padding: 1em;
-
-			div {
-				display: flex;
-
-				flex-direction: column;
-
-				width: 50%;
-
-				p {
-					display: flex;
-
-					align-items: center;
-					justify-content: center;
-
-					margin: 0;
-					margin-bottom: 0.4em;
-
-					font-size: 1.4em;
-				}
-
-				.sub {
-					margin-bottom: 0.2em;
-
-					font-size: 1em;
-				}
-			}
-
-			a {
-				display: flex;
-
-				align-items: center;
-				justify-content: center;
-
-				width: 9em;
-
-				height: min-content;
-
-				margin-right: calc( 25% - 5em );
-				margin-left: calc( 25% - 5em );
-
-				padding: 0.8em;
-
-				border-radius: 0.5em;
-
-				background: $light-green;
-
-				color: $white;
-
-				font-family: 'Straczynski', 'Open Sans', sans-serif;
-
-				text-decoration: none;
-			}
-
-			a:hover {
-				color: $dark-green;
-			}
-		}
-
-		/* change direction of times and location text on mobile */
-		@media ( max-width: 600px ) {
-			.text {
-				flex-direction: column;
-
-				div {
-					width: 100%;
-				}
-
-				a {
-					margin-top: 1em;
-				}
-			}
-		}
-
-		/* styling the centered "or" with the surrounding lines */
-		.centered-or {
-			display: flex;
-
-			flex-direction: row;
-			align-items: center;
-
-			hr {
-				width: 100%;
-
-				height: 1px;
-
-				margin-right: 0.8em;
-				margin-left: 0.8em;
-
-				border: 0;
-
-				background: $light-green;
-			}
-
-			p {
-				margin: 0;
-
-				font-size: 1.5em;
-			}
-		}
-	}
-
-	.about-ribbon {
+	.mission {
 		display: flex;
 
 		flex-direction: column;
@@ -697,21 +546,21 @@ main {
 		}
 	}
 
-	/* ribbon/slider for list of ministries */
-	.ministries-ribbon {
+	.beliefs {
 		display: flex;
 
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
 
-		overflow: hidden;
+		width: 100%;
 
-		background-image: url( ../images/entryway.jpg );
-		background-position: center;
-		background-size: cover;
+		background: $white;
 
-		>p {
+		color: $black;
+
+		.title {
+			width: max-content;
+
 			padding: 0.6em;
 
 			border-radius: 1.3em;
@@ -724,116 +573,145 @@ main {
 			font-size: 1.2em;
 		}
 
-		/* each group of ministries */
-		.ministries-list {
-			display: flex;
+		>p {
+			margin-right: 5em;
+			margin-left: 5em;
 
-			flex-direction: row;
+			font-size: 1.1em;
+			text-align: justify;
+		}
 
-			/* indivivual item styling */
-			.ministry {
-				display: flex;
-
-				flex-direction: column;
-
-				width: 100%;
-
-				margin: 1em;
-
-				padding: 1em;
-
-				border: 2px solid $light-green;
-				border-radius: 1em;
-
-				background: $translucent-black;
-
-				h4 {
-					margin-top: 0.6em;
-					margin-bottom: 0.6em;
-
-					color: $light-gray;
-
-					font-family: 'Straczynski', 'Open Sans', sans-serif;
-					font-size: 1.1em;
-					font-weight: normal;
-
-					text-align: center;
-				}
-
-				p {
-					height: 100%;
-
-					color: $light-gray;
-				}
-
-				a {
-					align-self: center;
-
-					width: max-content;
-
-					padding: 0.8em;
-
-					border-radius: 0.5em;
-
-					background: $light-green;
-
-					color: $white;
-
-					font-family: 'Straczynski', 'Open Sans', sans-serif;
-
-					text-decoration: none;
-				}
-
-				a:hover {
-					color: $dark-green;
-				}
+		@media ( max-width: 760px ) {
+			>p {
+				margin-right: 2em;
+				margin-left: 2em;
 			}
 		}
 
-		/* arrows that show user to scroll/drag horizontally to view more ministries on mobile */
-		.arrows {
+		a {
 			display: flex;
 
-			width: 100%;
+			align-items: center;
+			align-self: center;
+			justify-content: center;
 
-			i {
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+
+		.accordion {
+			display: flex;
+
+			flex-direction: column;
+
+			width: calc( 100% - 4em );
+
+			margin-right: 2em;
+			margin-bottom: 1em;
+			margin-left: 2em;
+
+			font-size: 1.1em;
+
+			button {
 				width: 100%;
 
-				color: $black;
+				padding: 0.8em;
 
-				text-align: center;
+				border: 0;
+				border-radius: 0.5em;
+
+				background: $light-green;
+
+				color: $white;
+
+				font-family: 'Straczynski', 'Open Sans', sans-serif;
+				font-size: 1.1em;
+
+				cursor: pointer;
+
+				i {
+					float: right;
+
+					-webkit-transform: rotateZ( 0deg );
+					transform: rotateZ( 0deg );
+
+					transition: transform 0.5s;
+				}
+			}
+
+			button:hover {
+				background: $dark-green;
+			}
+
+			button.open {
+				border-radius: 0.5em 0.5em 0 0;
+
+				background: $dark-green;
+
+				i {
+					-webkit-transform: rotateZ( -180deg );
+					transform: rotateZ( -180deg );
+				}
 			}
 
 			p {
+				display: block;
+
+				max-height: 40em;
+
 				margin: 0;
+				padding: 1em;
 
-				color: $black;
+				overflow: hidden;
 
-				font-family: 'Straczynski', 'Open Sans', sans-serif;
-				font-size: 0.8em;
+				transition: max-height 0.5s, padding 0.6s;
+
+				/* border: 2px solid $dark-green; */
+				border-radius: 0 0 0.5em 0.5em;
+
+				background: $light-gray;
+
+				line-height: 1.6em;
+				text-align: justify;
+			}
+
+			p.closed {
+				max-height: 0;
+
+				padding: 0;
+
+				border: 0;
 			}
 		}
 
-		/* make ministries list a scroll snap enabled scroll interface to act as carousel */
-		@media ( max-width: 760px ) {
-			.ministries-list {
-				flex-direction: row;
+		@media ( min-width: 993px ) {
+			.accordion {
+				width: calc( 100% - 10em );
 
-				width: 100%;
-
-				overflow: scroll;
-				scroll-snap-type: x mandatory;
-
-				.ministry {
-					min-width: calc( 100vw - 5em );
-
-					scroll-snap-align: center;
-				}
+				margin-right: 5em;
+				margin-left: 5em;
 			}
 		}
 	}
 
-	.latest-vid {
+	.staff {
 		display: flex;
 
 		flex-direction: column;
@@ -841,15 +719,54 @@ main {
 
 		width: 100%;
 
-		padding-top: 0.5em;
-		padding-bottom: 2em;
+		background: $gray;
+
+		color: $black;
+
+		a {
+			display: flex;
+
+			align-items: center;
+			align-self: center;
+			justify-content: center;
+
+			width: 11em;
+
+			margin: 1em;
+
+			padding: 0.8em;
+
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+			font-size: 1.2em;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
+		}
+	}
+
+	.history {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+
+		width: 100%;
 
 		background: $light-gray;
 
+		color: $black;
+
 		.title {
 			width: max-content;
-
-			margin-bottom: 1.5em;
 
 			padding: 0.6em;
 
@@ -868,22 +785,43 @@ main {
 			margin-left: 5em;
 
 			font-size: 1.1em;
+			line-height: 1.6em;
+			text-align: center;
 		}
 
-		.vids {
+		@media ( max-width: 760px ) {
+			p {
+				margin-right: 2em;
+				margin-left: 2em;
+			}
+		}
+
+		a {
 			display: flex;
 
-			flex-direction: row;
+			align-items: center;
+			align-self: center;
+			justify-content: center;
 
-			width: 100%;
+			width: 11em;
 
-			iframe {
-				width: 100%;
+			margin: 1em;
 
-				height: 200px;
+			padding: 0.8em;
 
-				margin: 1em;
-			}
+			border-radius: 0.5em;
+
+			background: $light-green;
+
+			color: $white;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $dark-green;
 		}
 	}
 }

@@ -12,15 +12,25 @@
 
   <!-- ribbon ribbon menu -->
   <div class="menu">
-    <a href="#" class="logo"><img src="images/logo_text.svg" alt="Southbrook church logo" /></a>
+    <a href="./index.html" class="logo"><img src="images/logo_text.svg" alt="Southbrook church logo" /></a>
 
     <!-- menu links only shown on large/medium screens -->
     <div class="desktop-links hide-small">
       <a href="./about.html">About Us</a>
-      <a href="#">Ministries</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Staff</a>
-      <a href="#">Giving</a>
+      <div class="ministries-menu">
+        <a href="./ministries.html">Ministries</a>
+        <div class="sub-links">
+          <a href="./ministries.html">Sunday School</a>
+          <a href="./ministries.html">Worship Service</a>
+          <a href="./ministries.html">Youth Group</a>
+          <a href="./ministries.html">Kid's Club</a>
+          <a href="./ministries.html">In-Home Bible Studies</a>
+          <a href="./ministries.html">Missionaries</a>
+        </div>
+      </div>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./staff.html">Staff</a>
+      <a href="./giving.html">Giving</a>
     </div>
     <!-- open menu button only shown on small screens -->
     <div class="mobile-links hide-medium hide-large">
@@ -32,10 +42,23 @@
   <div class="mobile-menu hide-medium hide-large" id="mobileMenu">
     <button onclick="closeMenu()"><i class="fas fa-times"></i></button>
     <a href="./about.html">About Us</a>
-    <a href="#">Ministries</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Staff</a>
-    <a href="#">Giving</a>
+    <div class="accordion" id="accordion">
+      <button onclick="toggleAccordion(event)">
+        <p>Ministries</p>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="closed">
+        <a href="./ministries.html">Sunday School</a>
+        <a href="./ministries.html">Worship Service</a>
+        <a href="./ministries.html">Youth Group</a>
+        <a href="./ministries.html">Kid's Club</a>
+        <a href="./ministries.html">In-Home Bible Studies</a>
+        <a href="./ministries.html">Missionaries</a>
+      </div>
+    </div>
+    <a href="./contact.html">Contact Us</a>
+    <a href="./staff.html">Staff</a>
+    <a href="./giving.html">Giving</a>
   </div>
 
   <!-- Header with full-height image -->
@@ -85,29 +108,31 @@
       <div class="ministries-list hide-small">
         <div class="ministry">
           <h4>Sunday School</h4>
-          <p>We have various Sunday morning classes for kids, teens, men and women, that all start at 9:30 AM.</p>
+          <p>&emsp;We have various Sunday morning classes for kids, teens, men and women, that all start at 9:30 AM.</p>
           <a href="#">Sounds Interesting</a>
         </div>
         <div class="ministry">
           <h4>Worship Service</h4>
-          <p>We enjoy a worship service at 10:30 AM every Sunday, an hour after Sunday School.</p>
+          <p>&emsp;We enjoy a worship service at 10:30 AM every Sunday, an hour after Sunday School.</p>
           <a href="#">Read More</a>
         </div>
       </div>
       <div class="ministries-list hide-small">
         <div class="ministry">
           <h4>Youth Group</h4>
-          <p>Through the school year, we host a youth group at 5:30 on Wednesday nights, with a meal beforehand.</p>
+          <p>&emsp;Through the school year, we host a youth group at 5:30 on Wednesday nights, with a meal beforehand.
+          </p>
           <a href="#">Explore Deeper</a>
         </div>
         <div class="ministry">
           <h4>Kid's Club</h4>
-          <p>During the youth group we also have a club for the younger kids, also on Wednesday nights with dinner.</p>
+          <p>&emsp;During the youth group we also have a club for the younger kids, also on Wednesday nights with
+            dinner.</p>
           <a href="#">Learn More</a>
         </div>
         <div class="ministry">
           <h4>In-Home Bible Studies</h4>
-          <p>We also have bible studies throughout the week, that cycle between various member's homes.</p>
+          <p>&emsp;We also have bible studies throughout the week, that cycle between various member's homes.</p>
           <a href="#">I'm Interested</a>
         </div>
       </div>
@@ -122,27 +147,29 @@
       <div class="ministries-list hide-large hide-medium">
         <div class="ministry">
           <h4>Sunday School</h4>
-          <p>We have various Sunday morning classes for kids, teens, men and women, that all start at 9:30 AM.</p>
+          <p>&emsp;We have various Sunday morning classes for kids, teens, men and women, that all start at 9:30 AM.</p>
           <a href="#">Sounds Interesting</a>
         </div>
         <div class="ministry">
           <h4>Worship Service</h4>
-          <p>We enjoy a worship service at 10:30 AM every Sunday, an hour after Sunday School.</p>
+          <p>&emsp;We enjoy a worship service at 10:30 AM every Sunday, an hour after Sunday School.</p>
           <a href="#">Read More</a>
         </div>
         <div class="ministry">
           <h4>Youth Group</h4>
-          <p>Through the school year, we host a youth group at 5:30 on Wednesday nights, with a meal beforehand.</p>
+          <p>&emsp;Through the school year, we host a youth group at 5:30 on Wednesday nights, with a meal beforehand.
+          </p>
           <a href="#">Explore Deeper</a>
         </div>
         <div class="ministry">
           <h4>Kid's Club</h4>
-          <p>During the youth group we also have a club for the younger kids, also on Wednesday nights with dinner.</p>
+          <p>&emsp;During the youth group we also have a club for the younger kids, also on Wednesday nights with
+            dinner.</p>
           <a href="#">Learn More</a>
         </div>
         <div class="ministry">
           <h4>In-Home Bible Studies</h4>
-          <p>We also have bible studies throughout the week, that cycle between various member's homes.</p>
+          <p>&emsp;We also have bible studies throughout the week, that cycle between various member's homes.</p>
           <a href="#">I'm Interested</a>
         </div>
       </div>
@@ -177,10 +204,10 @@
     </div>
     <div class="footer-menu">
       <a href="./about.html">About Us</a>
-      <a href="#">Ministries</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Staff</a>
-      <a href="#">Giving</a>
+      <a href="./ministries.html">Ministries</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./staff.html">Staff</a>
+      <a href="./giving.html">Giving</a>
     </div>
     <div class="social-media">
       <a href="https://www.facebook.com/southbrookbaptist.church"><i class="fab fa-facebook"></i></a>
@@ -199,6 +226,18 @@
 
     function closeMenu() {
       menu.style.display = "none";
+    }
+  </script>
+  <script>
+    function toggleAccordion(e) {
+      var target = e.target
+      if (target.tagName == "BUTTON") {
+        target.parentElement.children[1].classList.toggle("closed");
+        target.parentElement.children[0].classList.toggle("open");
+      } else {
+        target.parentElement.parentElement.children[1].classList.toggle("closed");
+        target.parentElement.parentElement.children[0].classList.toggle("open");
+      }
     }
   </script>
 
