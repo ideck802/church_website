@@ -574,6 +574,14 @@ main {
 					overflow: hidden;
 				}
 
+				img.heidi {
+					height: 700px;
+				}
+
+				img.mandy {
+					height: 280px;
+				}
+
 				.description {
 					display: flex;
 
@@ -672,9 +680,35 @@ main {
 						}
 					}
 
-					@media ( min-width: 993px ) {
-						img {
+					@media ( max-width: 800px ) {
+						img.heidi {
 							height: 66%;
+
+							object-position: 50% 50%;
+						}
+					}
+
+					@media ( min-width: 800px ) {
+						flex-direction: row;
+
+						align-items: center;
+
+						img {
+							height: 100%;
+						}
+					}
+				}
+
+				@media ( min-width: 500px ) {
+					.popup#mandy {
+						flex-direction: row;
+
+						align-items: center;
+
+						img {
+							height: 100%;
+
+							object-position: 50% 30%;
 						}
 					}
 				}
@@ -694,6 +728,14 @@ main {
 						height: 600px;
 
 						object-position: 50% 30%;
+					}
+
+					img.heidi {
+						object-position: 50% 50%;
+					}
+
+					img.mandy {
+						height: 700px;
 					}
 				}
 			}
