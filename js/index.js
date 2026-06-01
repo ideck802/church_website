@@ -16,7 +16,7 @@ function convert24To12Hour(timeString) {
 
 fetch('events.json').then(response => response.json())
   .then(events => {
-    const eventList = document.getElementById('event-list');
+    const eventList = document.getElementById('event_list');
     const sortedEvents = sortEvents(events);
     let html = '';
 

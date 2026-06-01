@@ -851,21 +851,48 @@ main {
 
 		background: $lighter-green;
 
-		.title {
-			width: max-content;
+		.event-title {
+			display: flex;
+
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
 
 			margin-bottom: 1.5em;
 
-			padding: 0.6em;
+			.title {
+				width: max-content;
 
-			border-radius: 1.3em;
+				padding: 0.6em;
 
-			background: $dark-green;
+				border-radius: 1.3em;
 
-			color: $light-gray;
+				background: $dark-green;
 
-			font-family: 'Straczynski', 'Open Sans', sans-serif;
-			font-size: 1.2em;
+				color: $light-gray;
+
+				font-family: 'Straczynski', 'Open Sans', sans-serif;
+				font-size: 1.2em;
+			}
+
+			a {
+				align-self: center;
+
+				width: max-content;
+
+				margin-left: 15px;
+				padding: 0.8em;
+
+				border-radius: 0.5em;
+
+				background: $light-green;
+
+				color: $white;
+
+				font-family: 'Straczynski', 'Open Sans', sans-serif;
+
+				text-decoration: none;
+			}
 		}
 
 		/* arrows that show user to scroll/drag horizontally to view more events on mobile */
