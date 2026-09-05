@@ -858,8 +858,6 @@ main {
 			align-items: center;
 			justify-content: center;
 
-			margin-bottom: 1.5em;
-
 			.title {
 				width: max-content;
 
@@ -998,6 +996,22 @@ main {
 
 					scroll-snap-align: center;
 				}
+			}
+		}
+
+		>p {
+			padding-left: 1em;
+			padding-right: 1em;
+
+			color: $dark-green;
+
+			font-family: 'Straczynski', 'Open Sans', sans-serif;
+			font-size: 0.8em;
+
+			text-align: center;
+
+			a {
+				color: $light-gray;
 			}
 		}
 	}
